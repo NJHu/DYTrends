@@ -1,0 +1,16 @@
+PODS:
+  - DYTrends (0.1.0)
+
+DEPENDENCIES:
+  - DYTrends (from `../`)
+
+EXTERNAL SOURCES:
+  DYTrends:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  DYTrends: 68bd741a2988fc6fde48f2ef94dad1a17eb2422d
+
+PODFILE CHECKSUM: 7b83dff92677bc6dc4328aa91c43f94930cfc16b
+
+COCOAPODS: 1.5.3

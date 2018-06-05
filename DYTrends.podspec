@@ -1,42 +1,78 @@
-#
-# Be sure to run `pod lib lint DYTrends.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see https://guides.cocoapods.org/syntax/podspec.html
-#
+
 
 Pod::Spec.new do |s|
-  s.name             = 'DYTrends'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of DYTrends.'
+s.name             = 'DYTrends'
+s.version          = '1.0.0'
+s.summary          = 'DYTrends, DYTrends'
 
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
 
-  s.description      = <<-DESC
-TODO: Add long description of the pod here.
-                       DESC
+s.description      = <<-DESC
+DYTrends, DYTrends, DYTrends, DYTrends, DYTrends, DYTrends, DYTrends
+DESC
 
-  s.homepage         = 'https://github.com/njhu/DYTrends'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'njhu' => '64hp@163.com' }
-  s.source           = { :git => 'https://github.com/njhu/DYTrends.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+s.homepage         = 'https://github.com/njhu/DYTrends'
 
-  s.ios.deployment_target = '8.0'
+s.license          = { :type => 'MIT', :file => 'LICENSE' }
+s.author           = { 'njhu' => '64hp@163.com' }
+#s.source           = { :git => 'https://github.com/njhu/DYTrends.git', :tag => s.version.to_s }
+s.source           = { :git => 'https://github.com/njhu/DYTrends.git', :branch =>'master' }
 
-  s.source_files = 'DYTrends/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'DYTrends' => ['DYTrends/Assets/*.png']
-  # }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+s.ios.deployment_target = '10.3'
+
+# 调试开发打开注释
+#s.source_files = 'DYTrends/Classes/**/*'
+
+# 上线打开注释
+#二级目录
+
+s.subspec 'Controller' do |ss|
+    ss.source_files = 'DYTrends/Classes/Controller/*.{swift}'
+    ss.dependency 'NJKit'
+    ss.dependency 'DYTrends/ViewModel'
+    ss.dependency 'DYTrends/View'
+    ss.dependency 'DYTrends/Model'
+end
+
+s.subspec 'Model' do |ss|
+    ss.source_files = 'DYTrends/Classes/Model/*.{swift}'
+    ss.dependency 'NJKit'
+end
+
+s.subspec 'View' do |ss|
+    ss.source_files = 'DYTrends/Classes/View/*.{swift}'
+    ss.dependency 'NJKit'
+    ss.dependency 'DYTrends/Model'
+    ss.dependency 'DYTrends/ViewModel'
+end
+
+s.subspec 'ViewModel' do |ss|
+    ss.source_files = 'DYTrends/Classes/ViewModel/*.{swift}'
+    ss.dependency 'NJKit'
+    ss.dependency 'DYTrends/Model'
+end
+
+s.subspec 'Other' do |ss|
+    ss.source_files = 'DYTrends/Classes/Other/*.{swift}'
+    ss.dependency 'NJKit'
+    ss.dependency 'DYTrends/Controller'
+end
+
+
+#二级目录
+
+
+#s.resource_bundles = {
+#'NJKit' => ['DYTrends/*.{bundle}', 'DYTrends/*.{xcassets}']
+#}
+
+s.resources     = 'DYTrends/**/*.{xcassets}'
+
+s.frameworks    = 'UIKit'
+s.dependency 'Masonry'
+s.dependency 'SDWebImage'
+s.dependency 'MJRefresh'
+s.dependency 'Alamofire'
+s.dependency 'NJKit'
+
 end
