@@ -33,7 +33,9 @@ open  class NJNavBarViewController: UIViewController {
     }
     
     deinit {
-        navigationItem.removeObserver(self, forKeyPath: "title")
+        if self.isViewLoaded {
+            navigationItem.removeObserver(self, forKeyPath: "title")
+        }
     }
 }
 

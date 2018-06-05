@@ -9,8 +9,8 @@
 import UIKit
 
 open class NJRefreshTableViewController: NJTableViewController {
-
-   open override func viewDidLoad() {
+    
+    open override func viewDidLoad() {
         super.viewDidLoad()
         tableView.mj_header = NJRefreshNormalHeader(refreshingBlock: {[weak self] () -> Void in
             if let strongSelf = self {
@@ -65,7 +65,7 @@ extension NJRefreshTableViewController {
 }
 
 extension NJRefreshTableViewController {
-   open override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    open override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         var contentInset = scrollView.contentInset
         contentInset.bottom -= scrollView.mj_footer.frame.size.height
         scrollView.scrollIndicatorInsets = contentInset

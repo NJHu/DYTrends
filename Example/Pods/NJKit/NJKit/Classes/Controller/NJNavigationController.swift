@@ -16,17 +16,17 @@ open class NJNavigationController: UINavigationController {
         view.backgroundColor = UIColor.groupTableViewBackground
         getSystemGestureOfBack()
     }
-   open  override func pushViewController(_ viewController: UIViewController, animated: Bool) {
+    open  override func pushViewController(_ viewController: UIViewController, animated: Bool) {
         if childViewControllers.count > 0 {
             viewController.hidesBottomBarWhenPushed = true
         }
         super.pushViewController(viewController, animated: animated)
     }
-   open  override func viewWillLayoutSubviews() {
+    open  override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         navigationBar.isHidden = true
     }
-   open  override func viewDidLayoutSubviews() {
+    open  override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         navigationBar.isHidden = true
     }

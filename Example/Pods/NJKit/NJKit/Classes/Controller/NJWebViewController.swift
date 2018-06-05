@@ -32,7 +32,7 @@ open class NJWebViewController: NJViewController {
         }
     }
     
-   open override func viewDidLoad() {
+    open override func viewDidLoad() {
         super.viewDidLoad()
         nj_interactivePopDisabled = true
         nj_isBackActionBtnHidden = true
@@ -50,14 +50,16 @@ open class NJWebViewController: NJViewController {
             webView?.loadHTMLString(htmlStr, baseURL: nil)
         }
     }
-   open override func viewDidLayoutSubviews() {
+    open override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         view.bringSubview(toFront: progressView)
     }
     deinit {
-        webView?.removeObserver(self, forKeyPath: "estimatedProgress")
-        webView?.removeObserver(self, forKeyPath: "title")
-        webView?.scrollView.removeObserver(self, forKeyPath: "contentSize")
+        if self.isViewLoaded {
+            webView?.removeObserver(self, forKeyPath: "estimatedProgress")
+            webView?.removeObserver(self, forKeyPath: "title")
+            webView?.scrollView.removeObserver(self, forKeyPath: "contentSize")
+        }
     }
 }
 

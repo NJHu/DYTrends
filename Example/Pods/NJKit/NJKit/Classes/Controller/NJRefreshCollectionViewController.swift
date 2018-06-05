@@ -9,8 +9,8 @@
 import UIKit
 
 open class NJRefreshCollectionViewController: NJCollectionViewController {
-
-   open override func viewDidLoad() {
+    
+    open override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.mj_header = NJRefreshNormalHeader(refreshingBlock: {[weak self] () -> Void in
             if let strongSelf = self {
@@ -24,7 +24,7 @@ open class NJRefreshCollectionViewController: NJCollectionViewController {
         })
         collectionView.mj_header.beginRefreshing()
     }
-   open func loadData(isMore: Bool) {
+    open func loadData(isMore: Bool) {
         
     }
 }
@@ -66,7 +66,7 @@ extension NJRefreshCollectionViewController {
 }
 
 extension NJRefreshCollectionViewController {
-   open override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    open override func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         var contentInset = scrollView.contentInset
         contentInset.bottom -= scrollView.mj_footer.frame.size.height
         scrollView.scrollIndicatorInsets = contentInset

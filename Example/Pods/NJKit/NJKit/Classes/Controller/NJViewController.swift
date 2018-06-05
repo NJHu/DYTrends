@@ -9,8 +9,8 @@
 import UIKit
 
 open class NJViewController: NJNavBarViewController {
-
-   open override func viewDidLoad() {
+    
+    open override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = UIColor.groupTableViewBackground
         automaticallyAdjustsScrollViewInsets = false

@@ -10,10 +10,10 @@ import UIKit
 
 open class NJTableViewController: NJViewController {
     
-   @IBOutlet public var tableView: UITableView!
+    @IBOutlet public var tableView: UITableView!
     private var style: UITableViewStyle = .plain
     
-   public init(tableViewStyle: UITableViewStyle) {
+    public init(tableViewStyle: UITableViewStyle) {
         super.init(nibName: nil, bundle: nil)
         style = tableViewStyle;
     }

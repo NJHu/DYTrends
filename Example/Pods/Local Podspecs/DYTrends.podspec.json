@@ -20,8 +20,10 @@
   },
   "source_files": "DYTrends/Classes/**/*",
   "resources": "DYTrends/**/*.{xcassets}",
-  "frameworks": "UIKit",
   "dependencies": {
+    "NJKit": [
+
+    ],
     "Masonry": [
 
     ],
@@ -33,9 +35,7 @@
     ],
     "Alamofire": [
 
-    ],
-    "NJKit": [
-
     ]
-  }
+  },
+  "frameworks": "UIKit"
 }

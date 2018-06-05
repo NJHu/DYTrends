@@ -9,8 +9,8 @@
 import UIKit
 
 open class NJCollectionViewController: NJViewController {
-
-   @IBOutlet public var collectionView: UICollectionView!
+    
+    @IBOutlet public var collectionView: UICollectionView!
     
     open override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,14 +44,14 @@ extension NJCollectionViewController {
 }
 
 extension NJCollectionViewController: UICollectionViewDelegate, UICollectionViewDataSource {
-   open  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
+    open  func scrollViewWillBeginDragging(_ scrollView: UIScrollView) {
         scrollView.scrollIndicatorInsets = scrollView.contentInset
         view.endEditing(true)
     }
-   open  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         return 0
+    open  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 0
     }
-   open  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    open  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         return UICollectionViewCell()
     }
 }
