@@ -21,43 +21,30 @@ s.source           = { :git => 'https://github.com/njhu/DYTrends.git', :branch =
 s.ios.deployment_target = '10.3'
 
 # 调试开发打开注释
-#s.source_files = 'DYTrends/Classes/**/*'
+s.source_files = 'DYTrends/Classes/**/*'
 
 # 上线打开注释
 #二级目录
 
-s.subspec 'Controller' do |ss|
-    ss.source_files = 'DYTrends/Classes/Controller/*.{swift}'
-    ss.dependency 'NJKit'
-    ss.dependency 'DYTrends/ViewModel'
-    ss.dependency 'DYTrends/View'
-    ss.dependency 'DYTrends/Model'
-end
-
-s.subspec 'Model' do |ss|
-    ss.source_files = 'DYTrends/Classes/Model/*.{swift}'
-    ss.dependency 'NJKit'
-end
-
-s.subspec 'View' do |ss|
-    ss.source_files = 'DYTrends/Classes/View/*.{swift}'
-    ss.dependency 'NJKit'
-    ss.dependency 'DYTrends/Model'
-    ss.dependency 'DYTrends/ViewModel'
-end
-
-s.subspec 'ViewModel' do |ss|
-    ss.source_files = 'DYTrends/Classes/ViewModel/*.{swift}'
-    ss.dependency 'NJKit'
-    ss.dependency 'DYTrends/Model'
-end
-
-s.subspec 'Other' do |ss|
-    ss.source_files = 'DYTrends/Classes/Other/*.{swift}'
-    ss.dependency 'NJKit'
-    ss.dependency 'DYTrends/Controller'
-end
-
+#s.subspec 'Controller' do |ss|
+#    ss.source_files = 'DYTrends/Classes/Controller/*.{swift,xib}'
+#end
+#
+#s.subspec 'Model' do |ss|
+#    ss.source_files = 'DYTrends/Classes/Model/*.{swift}'
+#end
+#
+#s.subspec 'View' do |ss|
+#    ss.source_files = 'DYTrends/Classes/View/*.{swift,xib}'
+#end
+#
+#s.subspec 'ViewModel' do |ss|
+#    ss.source_files = 'DYTrends/Classes/ViewModel/*.{swift}'
+#end
+#
+#s.subspec 'Other' do |ss|
+#    ss.source_files = 'DYTrends/Classes/Other/*.{swift}'
+#end
 
 #二级目录
 
@@ -68,11 +55,11 @@ end
 
 s.resources     = 'DYTrends/**/*.{xcassets}'
 
+s.dependency 'NJKit'
 s.frameworks    = 'UIKit'
 s.dependency 'Masonry'
 s.dependency 'SDWebImage'
 s.dependency 'MJRefresh'
 s.dependency 'Alamofire'
-s.dependency 'NJKit'
 
 end

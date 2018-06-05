@@ -10,9 +10,9 @@ import UIKit
 import NJKit
 import MJRefresh
 
-class NJTrendsLiveShowViewController: NJRefreshCollectionViewController {
+public class NJTrendsLiveShowViewController: NJRefreshCollectionViewController {
     private lazy var liveShowListViewModel = NJLiveShowListViewModel()
-    override func viewDidLoad() {
+    override public func viewDidLoad() {
         super.viewDidLoad()
         let margin: CGFloat = 5.0
         let layoutWidth = (UIScreen.main.bounds.size.width - margin * 3) * 0.5
@@ -24,9 +24,9 @@ class NJTrendsLiveShowViewController: NJRefreshCollectionViewController {
         layout.sectionInset = UIEdgeInsets(top: 0, left: margin, bottom: 0, right: margin)
         collectionView.collectionViewLayout = layout
         
-        collectionView.register(UINib(nibName: "NJLiveShowCell", bundle: Bundle.main), forCellWithReuseIdentifier: "NJLiveShowCell")
+        collectionView.register(UINib(nibName: "NJLiveShowCell", bundle: Bundle(for: self.classForCoder)), forCellWithReuseIdentifier: "NJLiveShowCell")
     }
-    override func loadData(isMore: Bool) {
+    override public func loadData(isMore: Bool) {
         liveShowListViewModel.getLiveShowsData(isMore: isMore) {[weak self] (error, isSucceed, isHasMore) in
             self?.endHeaderFooterRefreshing()
             self?.collectionView.reloadData()
@@ -39,13 +39,12 @@ extension NJTrendsLiveShowViewController {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    override public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return self.liveShowListViewModel.liveShowViewModels.count
     }
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    override public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let liveShowCell = collectionView.dequeueReusableCell(withReuseIdentifier: "NJLiveShowCell", for: indexPath) as! NJLiveShowCell
         liveShowCell.liveShowViewModel = self.liveShowListViewModel.liveShowViewModels[indexPath.row]
-        
         return liveShowCell
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

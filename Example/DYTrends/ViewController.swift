@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import DYTrends
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        addChildViewController(NJTrendsLiveShowViewController())
+        view.addSubview(childViewControllers.first!.view!)
     }
 
     override func didReceiveMemoryWarning() {

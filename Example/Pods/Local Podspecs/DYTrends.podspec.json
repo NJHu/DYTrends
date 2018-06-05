@@ -1,8 +1,8 @@
 {
   "name": "DYTrends",
-  "version": "0.1.0",
-  "summary": "A short description of DYTrends.",
-  "description": "TODO: Add long description of the pod here.",
+  "version": "1.0.0",
+  "summary": "DYTrends, DYTrends",
+  "description": "DYTrends, DYTrends, DYTrends, DYTrends, DYTrends, DYTrends, DYTrends",
   "homepage": "https://github.com/njhu/DYTrends",
   "license": {
     "type": "MIT",
@@ -13,10 +13,29 @@
   },
   "source": {
     "git": "https://github.com/njhu/DYTrends.git",
-    "tag": "0.1.0"
+    "branch": "master"
   },
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.3"
   },
-  "source_files": "DYTrends/Classes/**/*"
+  "source_files": "DYTrends/Classes/**/*",
+  "resources": "DYTrends/**/*.{xcassets}",
+  "frameworks": "UIKit",
+  "dependencies": {
+    "Masonry": [
+
+    ],
+    "SDWebImage": [
+
+    ],
+    "MJRefresh": [
+
+    ],
+    "Alamofire": [
+
+    ],
+    "NJKit": [
+
+    ]
+  }
 }
