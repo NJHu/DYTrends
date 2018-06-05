@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'DYTrends_Example' do
+  pod 'DYTrends', :path => '../'
+
+  target 'DYTrends_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
