@@ -10,7 +10,7 @@ import UIKit
 import NJKit
 import MJRefresh
 
-public class NJTrendsLiveShowViewController: NJRefreshCollectionViewController {
+class NJTrendsLiveShowViewController: NJRefreshCollectionViewController {
     private lazy var liveShowListViewModel = NJLiveShowListViewModel()
     override public func viewDidLoad() {
         super.viewDidLoad()
