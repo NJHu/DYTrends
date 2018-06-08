@@ -6,9 +6,10 @@
 //
 
 import UIKit
+//import NJTrendsLiveShowViewController
 
 @objc class Target_Trends: NSObject {
-    @objc func Action_viewController(params: [String: AnyObject]) -> UIViewController {
+    @objc func Action_mainViewController(params: [String: AnyObject]) -> UIViewController {
         return NJTrendsLiveShowViewController()
     }
 }
