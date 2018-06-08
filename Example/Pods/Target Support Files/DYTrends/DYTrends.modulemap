@@ -1,0 +1,6 @@
+framework module DYTrends {
+  umbrella header "DYTrends-umbrella.h"
+
+  export *
+  module * { export * }
+}

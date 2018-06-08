@@ -1,0 +1,41 @@
+{
+  "name": "DYTrends",
+  "version": "1.0.0",
+  "summary": "DYTrends, DYTrends",
+  "description": "DYTrends, DYTrends, DYTrends, DYTrends, DYTrends, DYTrends, DYTrends",
+  "homepage": "https://github.com/njhu/DYTrends",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "njhu": "64hp@163.com"
+  },
+  "source": {
+    "git": "https://github.com/njhu/DYTrends.git",
+    "branch": "master"
+  },
+  "platforms": {
+    "ios": "10.3"
+  },
+  "source_files": "DYTrends/Classes/**/*",
+  "resources": "DYTrends/**/*.{xcassets}",
+  "dependencies": {
+    "NJKit": [
+
+    ],
+    "Masonry": [
+
+    ],
+    "SDWebImage": [
+
+    ],
+    "MJRefresh": [
+
+    ],
+    "Alamofire": [
+
+    ]
+  },
+  "frameworks": "UIKit"
+}
