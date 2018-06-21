@@ -15,8 +15,8 @@ import NJKit
         let childController = DYTrendsViewController()
         let nav = NJNavigationController(rootViewController: childController)
         
-        childController.tabBarItem.image = UIImage.nj_imageFromXcassets(name: "btn_live_normal", bundleClass: Target_Trends.self)
-        childController.tabBarItem.selectedImage = UIImage.nj_imageFromXcassets(name: "btn_live_selected", bundleClass: Target_Trends.self)
+        childController.tabBarItem.image = UIImage.nj_image(name: "btn_live_normal", bundleClass: Target_Trends.self)
+        childController.tabBarItem.selectedImage = UIImage.nj_image(name: "btn_live_selected", bundleClass: Target_Trends.self)
         childController.tabBarItem.title = "关注"
         childController.tabBarItem.titlePositionAdjustment = UIOffset(horizontal: 0, vertical: -3);
         
